@@ -4,6 +4,8 @@
 
 **中文** · [English](README.md)
 
+为 [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) 构建。
+
 dsh host 平面 cordis 插件：为 dsh 的 web 能力 seam（`ctx.web`）注册搜索提供商 **`tavily`**，让 `web_search` 工具默认走 **Tavily Search API**（`POST https://api.tavily.com/search`）。
 
 - 不替换 `web_search` 工具本身：工具、系统提示、展示卡片均保持原样，只有搜索后端换成 Tavily。

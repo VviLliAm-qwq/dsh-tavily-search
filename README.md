@@ -4,6 +4,8 @@
 
 **English** · [中文](README.zh.md)
 
+Built for [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI).
+
 A host-plane Cordis plugin for dsh: it registers the **`tavily`** search provider
 on dsh's web seam (`ctx.web`), so the `web_search` tool goes to the **Tavily
 Search API** (`POST https://api.tavily.com/search`).
