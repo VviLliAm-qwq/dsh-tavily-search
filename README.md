@@ -1,5 +1,7 @@
 # dsh-web-tavily
 
+[![ci](https://github.com/VviLliAm-qwq/dsh-web-tavily/actions/workflows/ci.yml/badge.svg)](https://github.com/VviLliAm-qwq/dsh-web-tavily/actions/workflows/ci.yml)
+
 **English** · [中文](README.zh.md)
 
 A host-plane Cordis plugin for dsh: it registers the **`tavily`** search provider
@@ -44,11 +46,15 @@ Search API** (`POST https://api.tavily.com/search`).
 
 ## Install
 
-1. Copy the package into
-   `~/.dsh/profiles/dsh-tui/node_modules/dsh-web-tavily/`.
-2. Append `"dsh-web-tavily"` to `dsh.profile.bundles` in
-   `~/.dsh/profiles/dsh-tui/package.json`.
-3. **Make tavily the default search backend.** This has to be written in the
+1. Install it into your profile — it is published on npm as `dsh-web-tavily`:
+
+   ```sh
+   dsh plugin --profile dsh-tui add dsh-web-tavily
+   # from a local checkout instead:
+   # dsh plugin --profile dsh-tui add file:<path to this package>
+   ```
+
+2. **Make tavily the default search backend.** This has to be written in the
    profile's user patch layer (the `web:` section of `settings.yaml` does not
    affect service configuration) — edit
    `~/.dsh/profiles/dsh-tui/cordis.patch.yml` and add:
@@ -66,7 +72,7 @@ Search API** (`POST https://api.tavily.com/search`).
    `duplicate loader entry id: web`. Override the existing row by id instead, and
    note that an override **replaces the whole config**, which is why
    `fetchProvider` is restated above.
-4. Restart dsh-tui (`/restart`).
+3. Restart dsh-tui (`/restart`).
 
 ## Configuration
 
@@ -163,6 +169,7 @@ exchange for the complete safety preflight.
 ## Publishing
 
 - **Repository**: <https://github.com/VviLliAm-qwq/dsh-web-tavily> (public)
+- **Release**: `v*` tags drive `.github/workflows/release.yml`, which publishes to npm through **trusted publishing (OIDC)** — no token is stored in the repository.
 
 ## Usage
 

@@ -1,5 +1,7 @@
 # dsh-web-tavily
 
+[![ci](https://github.com/VviLliAm-qwq/dsh-web-tavily/actions/workflows/ci.yml/badge.svg)](https://github.com/VviLliAm-qwq/dsh-web-tavily/actions/workflows/ci.yml)
+
 **中文** · [English](README.md)
 
 dsh host 平面 cordis 插件：为 dsh 的 web 能力 seam（`ctx.web`）注册搜索提供商 **`tavily`**，让 `web_search` 工具默认走 **Tavily Search API**（`POST https://api.tavily.com/search`）。
@@ -30,10 +32,15 @@ dsh host 平面 cordis 插件：为 dsh 的 web 能力 seam（`ctx.web`）注册
 
 ## 安装
 
-1. 把整个包复制到
-   `~/.dsh/profiles/dsh-tui/node_modules/dsh-web-tavily/`。
-2. 在 `~/.dsh/profiles/dsh-tui/package.json` 的 `dsh.profile.bundles` 追加 `"dsh-web-tavily"`。
-3. **把 web 服务默认搜索改为 tavily**（必须写在 profile 用户补丁层，`settings.yaml` 的 `web:` 段对服务配置无效）——
+1. 装进 profile —— 它以 `dsh-web-tavily` 发布在 npm 上：
+
+   ```sh
+   dsh plugin --profile dsh-tui add dsh-web-tavily
+   # 从本仓库本地安装（开发）：
+   # dsh plugin --profile dsh-tui add file:<本包路径>
+   ```
+
+2. **把 web 服务默认搜索改为 tavily**（必须写在 profile 用户补丁层，`settings.yaml` 的 `web:` 段对服务配置无效）——
    编辑 `~/.dsh/profiles/dsh-tui/cordis.patch.yml` 追加：
 
    ```yaml
@@ -47,7 +54,7 @@ dsh host 平面 cordis 插件：为 dsh 的 web 能力 seam（`ctx.web`）注册
    `web` 行由基座 dsh-base 提供，**不要用 `insert:` 新增同 id 行**——那会撞 id 直接崩
    `duplicate loader entry id: web`；这里要按 id 覆盖既有行，且覆盖是**整行重写，需写全
    `fetchProvider`**。
-4. 重启 dsh-tui（`/restart`）生效。
+3. 重启 dsh-tui（`/restart`）生效。
 
 ## 配置
 
@@ -111,6 +118,7 @@ config:
 ## 发布
 
 - **仓库**：<https://github.com/VviLliAm-qwq/dsh-web-tavily>（公开）
+- **发布方式**：`v*` tag 驱动 `.github/workflows/release.yml`，经 npm **可信发布（OIDC）**上传——仓库内不存放任何令牌。
 
 ## 使用
 
