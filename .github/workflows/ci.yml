@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # Pure ESM with no dependencies and no build step: lib/ is the source.
+      # The host provides every @deepseek-ai/* package at runtime, so nothing
+      # has to be installed to check the tree.
+      - name: Syntax-check every module
+        run: |
+          for f in lib/*.js; do
+            node --check "$f"
+          done
+
+      - name: Reject a UTF-8 BOM (a BOM in JSON/YAML is a hard host failure)
+        run: |
+          if grep -rlP '^\xef\xbb\xbf' --include='*.json' --include='*.yml' --include='*.md' --include='*.js' .; then
+            echo "::error::the files above start with a UTF-8 BOM"
+            exit 1
+          fi
+          echo "no BOM found"
+
+      - name: Verify the published tarball layout
+        run: npm pack --dry-run
