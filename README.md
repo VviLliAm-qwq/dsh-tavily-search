@@ -1,4 +1,4 @@
-# dsh-tavily-search
+# dsh-web-tavily
 
 **English** · [中文](README.zh.md)
 
@@ -45,8 +45,8 @@ Search API** (`POST https://api.tavily.com/search`).
 ## Install
 
 1. Copy the package into
-   `~/.dsh/profiles/dsh-tui/node_modules/dsh-tavily-search/`.
-2. Append `"dsh-tavily-search"` to `dsh.profile.bundles` in
+   `~/.dsh/profiles/dsh-tui/node_modules/dsh-web-tavily/`.
+2. Append `"dsh-web-tavily"` to `dsh.profile.bundles` in
    `~/.dsh/profiles/dsh-tui/package.json`.
 3. **Make tavily the default search backend.** This has to be written in the
    profile's user patch layer (the `web:` section of `settings.yaml` does not
@@ -74,7 +74,7 @@ The plugin's own section lives in `~/.dsh/settings.yaml` (it also appears in the
 settings screen under “Web search Tavily”):
 
 ```yaml
-dsh-tavily-search:
+dsh-web-tavily:
   apiKeyEnv: TAVILY_API_KEY
   searchDepth: basic
   topic: general
@@ -162,7 +162,7 @@ exchange for the complete safety preflight.
 
 ## Publishing
 
-- **Repository**: <https://github.com/VviLliAm-qwq/dsh-tavily-search> (public)
+- **Repository**: <https://github.com/VviLliAm-qwq/dsh-web-tavily> (public)
 
 ## Usage
 

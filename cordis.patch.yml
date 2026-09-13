@@ -1,4 +1,4 @@
-# dsh-tavily-search bundle patch: mounts the Tavily search provider plugin.
+# dsh-web-tavily bundle patch: mounts the Tavily search provider plugin.
 - insert:
-    - id: dsh-tavily-search
-      name: 'dsh-tavily-search'
+    - id: dsh-web-tavily
+      name: 'dsh-web-tavily'

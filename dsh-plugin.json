@@ -1,9 +1,9 @@
 {
   "$schema": "https://dsh.community/schemas/dsh-plugin-0.15.json",
   "manifestVersion": "0.15",
-  "id": "com.dsh-tui.dsh-tavily-search",
-  "name": "dsh-tavily-search",
-  "version": "0.3.0",
+  "id": "com.dsh-tui.dsh-web-tavily",
+  "name": "dsh-web-tavily",
+  "version": "0.4.0",
   "facets": {
     "host": {
       "entry": "lib/index.js",
@@ -21,6 +21,6 @@
   "subscriptions": [],
   "license": "MIT",
   "source": {
-    "repository": "https://github.com/VviLliAm-qwq/dsh-tavily-search"
+    "repository": "https://github.com/VviLliAm-qwq/dsh-web-tavily"
   }
 }

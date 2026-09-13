@@ -2,6 +2,21 @@
 
 All notable changes to this project are documented in this file.
 
+## 0.4.0 (2026-09-13)
+
+### Changed
+
+- **Renamed again, to `dsh-web-tavily`.** The 0.3.0 name `dsh-tavily-search`
+  turned out to be taken on npm as well (`ouones`, v0.1.2) — as are
+  `dsh-tavily-provider`, `dsh-search-tavily`, `dsh-tavily` and
+  `dsh-tavily-web-search`; `dsh-web-tavily` is the free one. The package name,
+  the manifest `id`, the bundle patch's row id and module name, the Cordis name,
+  the settings namespace and the log file all follow it. 0.3.0 was never
+  published, so nobody has to migrate twice.
+- **Settings section and log file are now `dsh-web-tavily`**: the section in
+  `~/.dsh/settings.yaml` is `dsh-web-tavily:` and the lifecycle log is
+  `~/.dsh-tui/dsh-web-tavily.log`.
+
 ## 0.3.0 (2026-09-13)
 
 ### Changed

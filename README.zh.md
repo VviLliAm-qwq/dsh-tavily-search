@@ -1,4 +1,4 @@
-# dsh-tavily-search
+# dsh-web-tavily
 
 **中文** · [English](README.md)
 
@@ -31,8 +31,8 @@ dsh host 平面 cordis 插件：为 dsh 的 web 能力 seam（`ctx.web`）注册
 ## 安装
 
 1. 把整个包复制到
-   `~/.dsh/profiles/dsh-tui/node_modules/dsh-tavily-search/`。
-2. 在 `~/.dsh/profiles/dsh-tui/package.json` 的 `dsh.profile.bundles` 追加 `"dsh-tavily-search"`。
+   `~/.dsh/profiles/dsh-tui/node_modules/dsh-web-tavily/`。
+2. 在 `~/.dsh/profiles/dsh-tui/package.json` 的 `dsh.profile.bundles` 追加 `"dsh-web-tavily"`。
 3. **把 web 服务默认搜索改为 tavily**（必须写在 profile 用户补丁层，`settings.yaml` 的 `web:` 段对服务配置无效）——
    编辑 `~/.dsh/profiles/dsh-tui/cordis.patch.yml` 追加：
 
@@ -54,7 +54,7 @@ dsh host 平面 cordis 插件：为 dsh 的 web 能力 seam（`ctx.web`）注册
 插件自身的设置段放 `~/.dsh/settings.yaml`（设置页「Plugin configuration」里也会出现「Web search Tavily」类）：
 
 ```yaml
-dsh-tavily-search:
+dsh-web-tavily:
   apiKeyEnv: TAVILY_API_KEY
   searchDepth: basic
   topic: general
@@ -110,7 +110,7 @@ config:
 
 ## 发布
 
-- **仓库**：<https://github.com/VviLliAm-qwq/dsh-tavily-search>（公开）
+- **仓库**：<https://github.com/VviLliAm-qwq/dsh-web-tavily>（公开）
 
 ## 使用
 

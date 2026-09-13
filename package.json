@@ -1,11 +1,11 @@
 {
-  "name": "dsh-tavily-search",
-  "version": "0.3.0",
+  "name": "dsh-web-tavily",
+  "version": "0.4.0",
   "description": "Tavily-backed search provider for dsh: registers the `tavily` provider on ctx.web so the web_search tool runs against the Tavily Search API",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VviLliAm-qwq/dsh-tavily-search.git"
+    "url": "git+https://github.com/VviLliAm-qwq/dsh-web-tavily.git"
   },
   "type": "module",
   "main": "lib/index.js",
