@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented in this file.
 
+## 0.4.1 (2026-09-13)
+
+- Documentation only, no code change. Installation now goes through `dsh plugin --profile dsh-tui add dsh-web-tavily` (the package is published) instead of copying files into `node_modules`, both READMEs gain a CI badge, and the release section records the OIDC trusted-publishing path.
+
 ## 0.4.0 (2026-09-13)
 
 ### Changed
