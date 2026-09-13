@@ -168,3 +168,7 @@ exchange for the complete safety preflight.
 
 Once installed and configured, let the model call `web_search` as usual: the
 `sources` list it returns (and the optional summary) now comes from Tavily.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

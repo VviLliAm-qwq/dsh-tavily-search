@@ -115,3 +115,7 @@ config:
 ## 使用
 
 装好并配置 key 后，照常让模型调用 `web_search` 即可；工具返回的 `Sources:` 列表与可选总结即来自 Tavily。
+
+## 许可
+
+MIT — 见 [LICENSE](LICENSE)。
